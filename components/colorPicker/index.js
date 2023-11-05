@@ -5,7 +5,7 @@ import s from "./styles.module.css";
 
 // this is just an example
 // feel free to use class based components and whatever paradigms you're most comfortable with
-const Welcome = () => {
+const ColorPicker = () => {
   // const [greeting, setGreeting] = useState(null);
   // const [value, setValue] = useState("");
 
@@ -82,7 +82,7 @@ const Welcome = () => {
               <br />
               <i className="colorValue">{rValue}</i>
             </td>
-            <td>  
+            <td>
               <b className="colorLabel">GREEN</b>
               <br />
               <input
@@ -136,4 +136,4 @@ const Welcome = () => {
   //   </button>
   // </div>
 
-export default Welcome;
+export default ColorPicker;
