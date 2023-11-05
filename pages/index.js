@@ -1,7 +1,7 @@
-import ColorPicker from "../components/colorPicker";
+import ColorPickerApp from "../components/colorPicker";
 
 const Home = () => {
-  return <ColorPicker />;
+  return <ColorPickerApp />;
 };
 
 export default Home;

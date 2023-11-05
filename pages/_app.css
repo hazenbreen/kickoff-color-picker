@@ -17,10 +17,11 @@ a {
 
 table td {
   padding: 5px;
+  padding-bottom: 15px;
   text-align: center;
 }
 
-#colorBox {
+.colorBox {
   border: 1px solid darkgrey;
   height: 30px;
   width: 60px;
