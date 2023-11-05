@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+table td {
+  padding: 5px;
+  text-align: center;
+}
+
+#colorBox {
+  border: 1px solid darkgrey;
+  height: 30px;
+  width: 60px;
+  background-color: rgb(127, 127, 127);
+}
