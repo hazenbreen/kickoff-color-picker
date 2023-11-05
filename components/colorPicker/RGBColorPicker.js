@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+var convert = require('color-convert');
 
 const RGBColorPicker = (props) => {
   const colorBoxId = "colorBox" + props.pickerNumber
@@ -25,6 +26,9 @@ const RGBColorPicker = (props) => {
   const updateColorBox = () => {
     const elem = document.getElementById(colorBoxId);
     elem.style.backgroundColor = "rgb(" + rValue + ", " + gValue + ", " + bValue + ")";
+
+    const hexVal = convert.rgb.hex(rValue, gValue, bValue)
+    props.passPickerColor(hexVal)
   };
 
 

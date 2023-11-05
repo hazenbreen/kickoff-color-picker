@@ -4,13 +4,14 @@ import axios from "axios";
 import RGBColorPicker from "./RGBColorPicker.js"
 import s from "./styles.module.css";
 
-// this is just an example
-// feel free to use class based components and whatever paradigms you're most comfortable with
 const ColorPickerApp = () => {
-  // const [greeting, setGreeting] = useState(null);
-  // const [value, setValue] = useState("");
+  const [picker1Color, setPicker1Color] =  useState("#7f7f7f")
+  const [picker2Color, setPicker2Color] =  useState("#7f7f7f")
+  const [picker3Color, setPicker3Color] =  useState("#7f7f7f")
+  const [picker4Color, setPicker4Color] =  useState("#7f7f7f")
+  const [picker5Color, setPicker5Color] =  useState("#7f7f7f")
 
-  // useEffect(() => {
+    // useEffect(() => {
     // const fetchGreeting = async () => {
     //   const { status, data } = await axios.get("/api/greeting");
 
@@ -39,6 +40,9 @@ const ColorPickerApp = () => {
   
   // if (!greeting) return null;
 
+  const savePalette = () => {
+
+  }
   
 
 
@@ -46,13 +50,16 @@ const ColorPickerApp = () => {
     <div className={s.welcomeContainer}>
       <table id="pickerTable">
         <tbody>
-          <RGBColorPicker pickerNumber="1"/>
-          <RGBColorPicker pickerNumber="2"/>
-          <RGBColorPicker pickerNumber="3"/>
-          <RGBColorPicker pickerNumber="4"/>
-          <RGBColorPicker pickerNumber="5"/>
+          <RGBColorPicker pickerNumber="1" passPickerColor={setPicker1Color}/>
+          <RGBColorPicker pickerNumber="2" passPickerColor={setPicker2Color}/>
+          <RGBColorPicker pickerNumber="3" passPickerColor={setPicker3Color}/>
+          <RGBColorPicker pickerNumber="4" passPickerColor={setPicker4Color}/>
+          <RGBColorPicker pickerNumber="5" passPickerColor={setPicker5Color}/>
         </tbody>
       </table>
+      <button id="savePaletteButton" onClick={savePalette}>
+        Save Your Palette
+      </button>
     </div>
   );
 };
